@@ -7,7 +7,6 @@ sections:
 - type: document
   path: src/index.md
   label: Page
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
@@ -19,4 +18,4 @@ build:
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: npm run build
+  instant_preview_command: npm start
