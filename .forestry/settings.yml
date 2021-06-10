@@ -5,8 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: src/_includes/base.njk
-  label: Test
+  path: src/index.md
+  label: Page
   match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
