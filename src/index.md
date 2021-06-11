@@ -3,7 +3,7 @@ title: RemovableDante - Dante Meick
 layout: base.njk
 ---
 
-# RemovableDante is the small digital space of _Dante Meick_, a graphic _designer_, _problem solver_, and _creative person_ in Brooklyn, New York.
+# RemovableDante is the digital space of _Dante Meick_, a graphic _designer_, _problem solver_, and _creative person_ in Brooklyn, New York.
 
 <span>STATUS:</span> Creative/Engineering – Product @ <a href="http://theatlantic.com" target="_blank">_The Atlantic_</a>
 
