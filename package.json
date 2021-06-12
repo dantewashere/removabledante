@@ -8,7 +8,8 @@
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "npm run sass -- --watch",
     "start": "npm-run-all sass --parallel watch:*",
-    "build": "npm-run-all sass --parallel"
+    "build": "npm-run-all sass --parallel",
+    "eleventy": "npm-run-all sass --parallel"
   },
   "keywords": [],
   "author": "",
