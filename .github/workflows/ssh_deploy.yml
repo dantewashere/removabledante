@@ -31,6 +31,7 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
-          rm: false
+          overwrite: true
+          tar_tmp_path: "${{ secrets.REMOTE_DIR }}"
           source: "html/"
           target: "${{ secrets.REMOTE_DIR }}"
