@@ -27,7 +27,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           mkdir ../build
-          cp -TR /public ../build
+          cp -TR ./public ../build
           tar -cvf deploy.tar ../build/
 
       # Copying files and artifacts via SSH
