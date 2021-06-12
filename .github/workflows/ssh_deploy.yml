@@ -20,7 +20,7 @@ jobs:
       - name: Build Eleventy
         uses: TartanLlama/actions-eleventy@master
         with:
-          args: --output /domains/removabledante.com/html/
+          args: --output /domains/removabledante.com/html
           install_dependencies: true
       
       # Copying files and artifacts via SSH
@@ -31,6 +31,6 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
-          rm: true
-          source: "html/"
+          rm: false
+          source: "domains/removabledante.com/html/"
           target: "${{ secrets.REMOTE_DIR }}"
