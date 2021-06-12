@@ -22,6 +22,13 @@ jobs:
         with:
           args: --output /domains/removabledante.com/html
           install_dependencies: true
+      
+      # Copy public into folder then tar it
+      - name: Run a multi-line script
+        run: |
+          mkdir ../build
+          cp -TR /public ../build
+          tar -cvf deploy.tar ../build/
 
       # Copying files and artifacts via SSH
       - name: Copying files to server
@@ -32,5 +39,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
           rm: true
-          source: "/html"
+          source: "deploy.tar"
           target: "${{ secrets.REMOTE_DIR }}"
