@@ -27,7 +27,7 @@ jobs:
         uses: garygrossgarten/github-action-scp@release
         with:
           local: html
-          remote: /domains/removabledante.com/html/
+          remote: /home/171546/users/.home/domains/removabledante.com/html
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           privateKey: ${{ secrets.SSH_KEY }}
