@@ -32,5 +32,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
           rm: false
-          source: "domains/removabledante.com/html/"
+          source: "html/"
           target: "${{ secrets.REMOTE_DIR }}"
