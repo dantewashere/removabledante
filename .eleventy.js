@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
         input: "src",
         output: "public",
       },
+      passthroughFileCopy: true,
     };
   };
 
