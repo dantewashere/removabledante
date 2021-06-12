@@ -14,30 +14,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, 
       # so your workflow can access it
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v2
 
       # Build your static website with Eleventy
       - name: Build Eleventy
         uses: TartanLlama/actions-eleventy@master
         with:
-          args: --output /domains/removabledante.com/html
+          args: --output html
           install_dependencies: true
       
-      # Copy public into folder then tar it
-      - name: Run a multi-line script
-        run: |
-          mkdir ../build
-          cp -TR /public ../build
-          tar -cvf deploy.tar ../build/
-
-      # Copying files and artifacts via SSH
-      - name: Copying files to server
-        uses: appleboy/scp-action@master
+      - name: Copy folder content recursively to remote
+        uses: garygrossgarten/github-action-scp@release
         with:
+          local: html
+          remote: /domains/removabledante.com/html/
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_KEY }}
+          privateKey: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
-          rm: true
-          source: "deploy.tar"
-          target: "${{ secrets.REMOTE_DIR }}"
+          rmRemote: true
