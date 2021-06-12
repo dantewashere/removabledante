@@ -20,13 +20,13 @@ jobs:
       - name: Build Eleventy
         uses: TartanLlama/actions-eleventy@master
         with:
-          args: --output html
+          args: --output public
           install_dependencies: true
       
       - name: Copy folder content recursively to remote
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: html
+          local: public
           remote: /home/171546/users/.home/domains/removabledante.com/html
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
