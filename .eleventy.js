@@ -2,7 +2,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.setBrowserSyncConfig({
-		files: './public/styles/**/*.css'
+		files: './styles/**/*.css'
 	});
     return {
       dir: {
