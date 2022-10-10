@@ -38,11 +38,11 @@
     <script type="application/ld+json">{"url":"http://www.removabledante.com","name":"Dante
       Meick","description":"","@context":"http://schema.org","@type":"WebSite"}</script>
     <link rel="stylesheet" href="{{ 'styles/main.css' | url }}">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500" rel="stylesheet">
   </head>
   <body>
     <main>
-      <div class="c-logo"></div>
+      <img class="c-logo" src="images/rd-mark.svg"/>
       <div class="c-content">
         {{ content | safe }}
       </div>
@@ -51,15 +51,19 @@
           <h3>Experience</h3>
           <ul>
             <li>
-              <i>The Atlantic</i>
+              <span class="c-info__employer">
+                <i>The Atlantic</i>
+              </span>
             </li>
             <li>Creative / Engineering – Product</li>
             <li>Head of Design & Developement – Re:think</li>
             <li>Art Director – Re:think</li>
           </ul>
           <ul>
-            <li>RecycleBank, Art Director</li>
-            <li>Squeeky Wheel Media, Designer</li>
+            <li>
+              <span class="c-info__employer">RecycleBank</span>, Art Director</li>
+            <li>
+              <span class="c-info__employer">Squeeky Wheel Media</span>, Designer</li>
           </ul>
         </div>
         <div class="c-info__contact">

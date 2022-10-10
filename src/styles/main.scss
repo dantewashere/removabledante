@@ -10,7 +10,7 @@ body {
 	font-family: "Work Sans", Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 30px;
-	background-color: #c6dbd3;
+	background-color: #f2eee9;
 	color: #252b29;
 	width: 100%;
 	margin: 0 auto;
@@ -33,8 +33,8 @@ a:hover {
 
 h1 {
 	position: relative;
-	font-size: 28px;
-	line-height: 40px;
+	font-size: 22px;
+	line-height: 36px;
 	margin: 0 auto 20px;
 	padding: 40px 0;
 	font-weight: 400;
@@ -43,55 +43,47 @@ h1 {
 	border-top: 1px solid #8ea59b;
 	border-bottom: 1px solid #8ea59b;
 
-	em {
-		font-weight: 700;
-		font-style: normal;
-	}
-}
-
-p {
-	font-size: 15px;
-	line-height: 30px;
-	margin: 0 auto 10px;
-	font-weight: 400;
-	font-style: normal;
-	letter-spacing: 0px;
-	width: 100%;
-
-	span {
-		font-size: 14px;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		font-weight: 700;
-		color: #333;
+	@media (min-width: 768px) {
+		font-size: 28px;
+		line-height: 46px;
 	}
 }
 
 main {
-	position: absolute;
+	position: relative;
 	max-width: 722px;
-	padding: 50px 30px;
-	top: 50vh;
-	left: 0;
-	right: 0;
+	width: 90%;
+	padding: 50px 10px;
 	margin: 0 auto;
-	transform: translateY(-50%);
 
 	@media (min-width: 768px) {
+		position: absolute;
+		top: 50vh;
+		left: 0;
+		right: 0;
+		transform: translateY(-50%);
 		padding: 50px 60px;
 	}
 }
 
+.c-logo {
+	position: relative;
+	top: 12px;
+	left: 8px;
+	z-index: 100;
+}
+
 .c-info {
-	display: flex;
-	gap: 5%;
+	display: block;
 	font-size: 16px;
 	line-height: 22px;
 
 	h3 {
 		font-size: 14px;
 		text-transform: uppercase;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.04em;
+		font-weight: 500;
+		font-style: normal;
 	}
 	ul {
 		padding: 0;
@@ -101,11 +93,24 @@ main {
 		list-style-type: none;
 		margin: 0 0 5px;
 	}
+
+	@media (min-width: 768px) {
+		display: flex;
+		gap: 5%;
+	}
 }
 
 .c-info__experience {
 	flex: 1;
+	margin: 40px 0;
+
+	@media (min-width: 768px) {
+		margin: 0;
+	}
 }
 .c-info__contact {
 	flex: 1;
+}
+.c-info__employer {
+	font-weight: 500;
 }
